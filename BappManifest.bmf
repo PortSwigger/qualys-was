@@ -2,8 +2,8 @@ Uuid: 3b0105b95e4645a7929faa0cbda1df28
 ExtensionType: 1
 Name: Qualys WAS
 RepoName: qualys-was
-ScreenVersion: 2.0.2
-SerialVersion: 11
+ScreenVersion: 2.0.3
+SerialVersion: 12
 MinPlatformVersion: 2
 ProOnly: True
 Author: Dave Ferguson, Qualys
