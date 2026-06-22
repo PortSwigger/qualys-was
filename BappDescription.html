@@ -1,36 +1,29 @@
-<p>The Qualys WAS Burp extension provides a way to easily push Burp scanner findings to the Web Application Scanning (WAS) module within the Qualys Cloud Platform. As a Qualys WAS customer, you can then view and report Burp issues alongside WAS findings for a more complete picture of your web application's security posture.</p>
+<p>
+    The Qualys WAS extension connects Burp with the Qualys Web Application Scanning (WAS) module on the Qualys Cloud
+    Platform. It lets you import a WAS finding into Repeater to manually validate a scanner-discovered vulnerability,
+    and send Burp Scanner issues to Qualys WAS so you can view and report them alongside WAS findings for a more
+    complete picture of your web application's security posture. A Qualys WAS subscription with API access is required.
+</p>
 
-<p>To learn more about Qualys WAS, its integration with Burp, and the additional security and compliance solutions available in the Qualys Cloud Platform, please visit <a href="https://qualys.com/was-burp">https://qualys.com/was-burp</a>.</p>
-
-<p><b>Requirements:</b></p>
-
+<h2>Features</h2>
 <ul>
-<li>Burp Suite Professional 1.7 or later</li>
-<li>Qualys WAS subscription, including API</li>
+    <li>Import a Qualys WAS finding into Repeater by finding ID or by browsing a web app's open findings, then replay
+        the request to confirm the vulnerability.</li>
+    <li>Send selected scanner issues to Qualys WAS directly from the issue context menu, with the option to purge or
+        close existing Burp issues in WAS.</li>
+    <li>Supports all Qualys shared platforms (US, EU, Canada, India) as well as private cloud platforms.</li>
 </ul>
 
-<p><b>Features:</b></p>
-
-<ul>
-    <li>Straightforward setup and usage</li>
-    <li>Supports all Qualys shared platforms as well as private cloud platforms</li>
-    <li>Selected Burp scanner finding(s) exported to Qualys WAS via context menu</li>
-    <li>Upstream proxy server settings in Burp are honored automatically</li>
-    <li>Option to purge or close existing Burp issues in WAS</li>
-    <li>Written in Java</li>
-</ul>
-
-<p><b>Usage:</b></p>
-
+<h2>Usage</h2>
 <ol>
-    <li>Add the extension to your instance of Burp Suite Professional by installing directly from the "BApp Store" tab within Burp or by loading the jar file from the Extensions tab.</li>
-    <li>In the "Qualys WAS" tab, select the appropriate Qualys platform for your subscription and enter your Qualys username & password.</li>
-    <li>Click "Validate Credentials" to ensure successful connectivity to the Qualys platform.</li>
-    <li>Perform passive and/or active scans in Burp.</li>
-    <li>Go to: Target &gt; Site map &gt; Issues.</li>
-    <li>Right-click the desired scanner issue(s) and click "Send to Qualys WAS".</li>
-    <li>Select the web application from WAS for which the issues apply. If you don't see the correct web app in the list, the web app may not have been created within WAS yet or the Qualys user account entered may not have permission to the correct web app.</li>
-    <li>Select the "purge" or "close" checkbox as desired.</li>
-    <li>Click the "Send to Qualys WAS" button.</li>
-    <li>View the "Logs" section on the Qualys WAS tab as needed for API success/failure messages.</li>
+    <li>On the Qualys WAS tab, select the platform for your subscription, enter your Qualys username and password, and
+        click Validate Credentials to confirm connectivity.</li>
+    <li>To validate a finding, right-click in the Repeater request area and choose Import Qualys WAS Finding.</li>
+    <li>Choose Enter Finding ID to fetch a known finding (the longer UUID is preferred), or Select from a Web App's Open
+        Findings to browse open vulnerabilities for a chosen web app, then pick a payload if multiple are present.</li>
+    <li>Click Import Request, update any transient authentication token such as a session cookie if needed, then send
+        the request and inspect the response.</li>
+    <li>To export issues, run passive and/or active scans, then open Target &rarr; Site map &rarr; Issues.</li>
+    <li>Right-click the desired scanner issues, choose Send to Qualys WAS, select the target web application, set the
+        purge or close option as needed, and confirm.</li>
 </ol>
